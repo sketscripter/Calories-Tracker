@@ -33,7 +33,7 @@ class _CalorieCounterState extends State<CalorieCounter> {
             '&amount=100&unit=grams');
     var response2 = await networkHelper2.getData();
     setState(() {
-      calories = response2["nutrition"]["nutrients"][29]["amount"];
+      calories = response2["nutrition"]["nutrients"][30]["amount"];
       fat = response2["nutrition"]["nutrients"][10]["amount"];
       carbs = response2["nutrition"]["nutrients"][5]["amount"];
       sugar = response2["nutrition"]["nutrients"][16]["amount"];
