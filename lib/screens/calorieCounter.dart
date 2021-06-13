@@ -79,7 +79,7 @@ class _CalorieCounterState extends State<CalorieCounter> {
                         ),
                         title: TextField(
                           decoration: InputDecoration(
-                              hintText: 'Enter food to get its stats',
+                              hintText: 'Enter food name',
                               filled: true,
                               fillColor: Colors.white,
                               icon: Icon(
