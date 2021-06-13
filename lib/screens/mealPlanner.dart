@@ -170,7 +170,7 @@ class _MealPlannerState extends State<MealPlanner> {
                   text: TextSpan(
                       style: Theme.of(context)
                           .textTheme
-                          .body1
+                          .bodyText2
                           .copyWith(fontSize: 25),
                       children: [
                         TextSpan(
@@ -262,7 +262,6 @@ class _MealPlannerState extends State<MealPlanner> {
                                   fats: _fats,
                                   carbs: _carbs,
                                   protein: _protein,
-
                                 )));
                   },
                 ),
