@@ -36,6 +36,10 @@ class _MealPlannerState extends State<MealPlanner> {
   String _lunchimg;
   String _dinnerimg;
   bool _showSpinner = false;
+  String _calories;
+  String _protein;
+  String _fats;
+  String _carbs;
 
   Future getData(double target, String diet) async {
     NetworkHelper networkHelper = NetworkHelper(
@@ -61,6 +65,10 @@ class _MealPlannerState extends State<MealPlanner> {
       _breakfast = response['meals'][0]['title'];
       _lunch = response['meals'][1]['title'];
       _dinner = response['meals'][2]['title'];
+      _calories = response['nutrients']['calories'].toString();
+      _protein = response['nutrients']['protein'].toString();
+      _carbs = response['nutrients']['carbohydrates'].toString();
+      _fats = response['nutrients']['fat'].toString();
       setState(() {
         _showSpinner = false;
       });
@@ -250,6 +258,11 @@ class _MealPlannerState extends State<MealPlanner> {
                                   breakfastimg: _breakfastimg,
                                   lunchimg: _lunchimg,
                                   dinnerimg: _dinnerimg,
+                                  calories: _calories,
+                                  fats: _fats,
+                                  carbs: _carbs,
+                                  protein: _protein,
+
                                 )));
                   },
                 ),
